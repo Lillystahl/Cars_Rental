@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :cars
-  validates :username, :first_name, :last_name :date_of_birth, presence: true
+  validates :username, :first_name, :last_name, :date_of_birth, presence: true
   validates :username, :email, uniqueness: true
 
 end
