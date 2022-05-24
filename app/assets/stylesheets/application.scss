@@ -12,6 +12,11 @@
 @import "components/index";
 @import "pages/index";
 
+
+
+li {
+  list-style: none;
+}
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&family=Quicksand:wght@300&display=swap');
 
 body {
@@ -26,3 +31,4 @@ body {
   font-family: 'Poppins', sans-serif;
   color: rgb(255, 255, 255);
   }
+
