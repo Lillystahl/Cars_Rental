@@ -1,16 +1,16 @@
 .btn-yours {
-  color: #568bec;
-  border: solid 1px;
+  background-color:#286cc5;
+  color: white;
   padding: 15px 25px;
   border-radius: 50px;
   font-weight: lighter;
-  opacity: 0,4;
+  opacity: 0,9;
   text-decoration: none;
 
 
   &:hover {
   transition: ease-in-out all .15s;
-  background-color: #4672c4;
+  background-color:#575F7D;
   color: white;
   text-decoration: none;
   opacity: 1;
