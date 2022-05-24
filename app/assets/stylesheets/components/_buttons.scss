@@ -1,0 +1,17 @@
+.btn-yours {
+  color: #568bec;
+  border: solid 1px;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0,4;
+
+
+  &:hover {
+  transition: ease-in-out all .3s;
+  background-color: #4672c4;
+  color: white;
+  text-decoration: none;
+  opacity: 1;
+  }
+}

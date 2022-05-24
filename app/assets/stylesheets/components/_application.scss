@@ -1,0 +1,41 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&family=Quicksand:wght@300&display=swap');
+
+// Import your components CSS files here.
+@import "alert";
+@import "avatar";
+@import "form_legend_clear";
+@import "navbar";
+@import "banner";
+@import "dropdown";
+@import "buttons";
+@import "footer";
+@import "application";
+@import "home";
+
+
+body {
+  background: #F7F9FC;
+  color: #575F7D;
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  font-weight: lighter
+}
+  h1 {
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(255, 255, 255);
+  }
