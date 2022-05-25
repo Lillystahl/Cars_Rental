@@ -12,23 +12,25 @@
 @import "components/index";
 @import "pages/index";
 
-
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Racing+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&family=Quicksand:wght@300&display=swap');
 
 li {
   list-style: none;
 }
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&family=Quicksand:wght@300&display=swap');
 
 body {
   background: white;
   color: #575F7D;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: normal;
 }
+
 h1 {
   font-size: 48px;
-  font-family: 'Poppins', sans-serif;
-  color: rgb(255, 255, 255);
+  font-family: 'Montserrat', sans-serif;
+  color: white;
 }
 
 a{
