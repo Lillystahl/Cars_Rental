@@ -4,7 +4,10 @@
   <div class="row">
         <%@cars.each do |car| %>
           <div class="card-product col-5 offset-1">
-            <img class="card-img" src=https://mclaren.scene7.com/is/image/mclaren/Mclaren_Artura_Zenith%20Black_03:crop-16x9?wid=1980&hei=1114 />
+          <%=
+          car.photo.attached? ? cl_image_tag(car.photo.key, crop: :fill, class:"card-img") : image_tag("https://mclaren.scene7.com/is/image/mclaren/Mclaren_Artura_Zenith%20Black_03:crop-16x9?wid=1980&hei=1114", class:"card-img")
+          %>
+            <%# <img class="card-img" src=https://mclaren.scene7.com/is/image/mclaren/Mclaren_Artura_Zenith%20Black_03:crop-16x9?wid=1980&hei=1114 /> %>
             <div class="card-product-infos">
               <li class= "list_item">
                 <h3><%= car.title %></h3>
