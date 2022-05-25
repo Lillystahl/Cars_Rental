@@ -1,18 +1,29 @@
 <div class="container">
-    <h1> All Cars</h1>
-      <ul>
-  <div class="row">
-        <%@cars.each do |car| %>
-          <div class="card-product col-5 offset-1">
-            <img class="card-img" src=https://mclaren.scene7.com/is/image/mclaren/Mclaren_Artura_Zenith%20Black_03:crop-16x9?wid=1980&hei=1114 />
-            <div class="card-product-infos">
-              <li class= "list_item">
-                <h3><%= car.title %></h3>
-                <p><%=car.description %></p>
-              </li>
+  <h1> Have a look at all Cars</h1>
+      <%# <ul class="list_cars"> %>
+        <div class="row">
+          <%@cars.each do |car| %>
+            <div class="px-3 col-lg-6 col-md-12 col-xs-12 col-sm-12">
+            <div class="card-product">
+              <%=
+             car.photo.attached? ? cl_image_tag(car.photo.key, crop: :fill, class:"card-img") : image_tag("https://mclaren.scene7.com/is/image/mclaren/Mclaren_Artura_Zenith%20Black_03:crop-16x9?wid=1980&hei=1114", class:"card-img")
+              %>
+              <div class="card-product-infos">
+                <div class= "list_item">
+                  <div>
+                    <h3><%= car.title %></h3>
+                    <p><%=car.description %></p>
+                    <p><%= car.model_type%></p>
+                    <p><%= car.price %>$</p>
+                    <p><%= car.user.first_name%> <%= car.user.last_name %></p>
+
+                  </div>
+                </div>
+              </div>
+
             </div>
-          </div>
-        <% end %>
-  </div>
-      </ul>
+            </div>
+          <% end %>
+        </div>
+      <%# </ul> %>
 </div>

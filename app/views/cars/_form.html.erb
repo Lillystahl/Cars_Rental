@@ -1,0 +1,11 @@
+<div class="form">
+<h2>Upload Car</h2>
+<%= simple_form_for(@car) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <%= f.input :model_type %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit "Upload", class: "btn btn-primary" %>
+<% end %>
+</div>
