@@ -1,20 +1,15 @@
-<h1>test</h1>
-  <div class="container">
-  <h1>test</h1>
+<div class="container">
   <div class="row">
     <div id="carouselExampleControls" class="col-8 carousel slide" data-bs-ride="carousel" style="margin: 0; padding: 0;">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
-
+          <img src="https://www.autoblog.nl/gallery/Ferrari/488_Pista//488-pista-10006.jpg" class="d-block w-100" alt="car">
         </div>
         <div class="carousel-item">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>
-
+          <img src="https://img.autovisie.nl/images/3VprBXVConFcg5hr6TL_p_beYa4=/1280x0/filters:quality(80):format(jpeg):background_color(fff)/https%3A%2F%2Fwww.autovisie.nl%2Fwp-content%2Fuploads%2FFerrari-488-Pista-Duik-in-de-Prijslijst-2.jpg" class="d-block w-100" alt="" >
         </div>
         <div class="carousel-item">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
-
+          <img src="https://static.moniteurautomobile.be/imgcontrol/images_tmp/clients/moniteur/c680-d465/content/medias/images/cars/ferrari/f-488/ferrari--f-488--2018/ferrari--f-488--2018-m-3.jpg" class="d-block w-100" alt="">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -27,8 +22,20 @@
       </button>
     </div>
     <div class="col-4 map-box"></div>
-    <div class="container">
-    <div class="text-box"></div>
+    <div class="text-box-infos">
+      <p>Title <%= @car.title %></p>
+      <p>Owner <%= @car.user.first_name %></p>
+      <p>Location</p>
+      <p>Description <%= @car.description %></p>
     </div>
-  <div>
   </div>
+
+
+
+  <div>
+</div>
+
+<%#
+"https://www.autoblog.nl/gallery/Ferrari/488_Pista//488-pista-10006.jpg"
+"https://img.autovisie.nl/images/3VprBXVConFcg5hr6TL_p_beYa4=/1280x0/filters:quality(80):format(jpeg):background_color(fff)/https%3A%2F%2Fwww.autovisie.nl%2Fwp-content%2Fuploads%2FFerrari-488-Pista-Duik-in-de-Prijslijst-2.jpg"
+"https://static.moniteurautomobile.be/imgcontrol/images_tmp/clients/moniteur/c680-d465/content/medias/images/cars/ferrari/f-488/ferrari--f-488--2018/ferrari--f-488--2018-m-3.jpg" %>
