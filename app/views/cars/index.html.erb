@@ -1,5 +1,4 @@
 <div class="container">
-<<<<<<< Updated upstream
   <h1> Have a look at all Cars</h1>
       <%# <ul class="list_cars"> %>
         <div class="row">
@@ -22,30 +21,6 @@
                 </div>
               </div>
 
-=======
-  <%# <ul class="list_cars"> %>
-  <div class="row" >
-    <div class="banner-container">
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://blogmedia.dealerfire.com/wp-content/uploads/sites/767/2018/08/Row-Of-Used-Cars-For-Sale-At-A-Dealership_b-e1547479966504.jpg)">
-      Have a look at all Cars
-      </div>
-    </div>
-    <%@cars.each do |car| %>
-      <div class="px-3 col-lg-6 col-md-12 col-xs-12 col-sm-12">
-      <%= link_to "cars/#{car.id}" do%>
-
-        <div class="card-product">
-          <img class="card-img" src=https://mclaren.scene7.com/is/image/mclaren/Mclaren_Artura_Zenith%20Black_03:crop-16x9?wid=1980&hei=1114 />
-          <div class="card-product-infos">
-            <div class= "list_item">
-              <%# <div> %>
-                <h3><%=car.title%></h3>
-                <p><%=car.description %></p>
-                <p><%= car.model_type%></p>
-                <p><%= car.price %>$</p>
-                <p><%= car.user.first_name%> <%= car.user.last_name %></p>
-              <%# </div> %>
->>>>>>> Stashed changes
             </div>
           </div>
         </div>
