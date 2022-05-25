@@ -1,21 +1,21 @@
 .banner {
+  height:100vh;
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 150px 180px;
   background-size:cover;
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170");
 
- h1 {
-  margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
+  .brand-name{
+    font-family: 'Racing Sans One', cursive;
+    font-size: 72px;
+    color: white;
   }
 
-   p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  h3 {
+    margin: 10px 0 60px 0;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
   }
 }

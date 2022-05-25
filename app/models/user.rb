@@ -7,4 +7,15 @@ class User < ApplicationRecord
   has_many :cars
   # validates :username, :first_name, :last_name, :date_of_birth, presence: true
   # validates :username, :email, uniqueness: true
+
+  validate :validate_age
+
+  private
+
+  def validate_age
+      if date_of_birth.present? && date_of_birth > 18.years.ago
+          errors.add(:date_of_birth, 'You should be over 18 years old.')
+      end
+  end
+  
 end
