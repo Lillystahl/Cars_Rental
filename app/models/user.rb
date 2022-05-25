@@ -7,5 +7,4 @@ class User < ApplicationRecord
   has_many :cars
   # validates :username, :first_name, :last_name, :date_of_birth, presence: true
   # validates :username, :email, uniqueness: true
-
 end
