@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CarsRental</title>
+    <title>AmazingRentals</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -13,10 +13,18 @@
   </head>
 
   <body>
+<<<<<<< HEAD
   <%= render 'shared/navbar' %>
 
     <%= yield %>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
+=======
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <%= render 'shared/navbar' %>
+    <%= yield %>
+  <%= render 'shared/footer' %>
+>>>>>>> master
   </body>
 </html>
