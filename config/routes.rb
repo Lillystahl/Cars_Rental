@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
   root to: 'pages#home'
+  devise_for :users
   get 'cars', to: 'cars#index'
+  get "cars/new", to: "cars#new"
+  post "cars", to: "cars#create"
   get 'cars/:id', to: 'cars#show'
 end
