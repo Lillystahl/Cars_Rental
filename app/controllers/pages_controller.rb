@@ -4,7 +4,17 @@ class PagesController < ApplicationController
 
   end
 
-  def dashboard
-
+  def dashboardmycars
+    @cars_user = []
+    Car.all.each do |car|
+      if car.user == current_user
+        @cars_user<<car
+      end
+    end
   end
+
+  def dashboardmybookings
+    @user = current_user
+  end
+
 end
