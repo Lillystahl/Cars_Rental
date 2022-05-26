@@ -2,20 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&family=Quicksand:wght@300&display=swap');
 // @import "map";
 
-.carousel-item {
+// .carousel-item {
+//   height: 400px;
+
+//   img{
+//     object-fit: cover;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     border-radius: 5px 0 0 5px;
+//   }
+
+// }
+
+  .card-img-show {
+  object-fit: cover;
   height: 400px;
-
-  img{
-    object-fit: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px 0 0 5px;
-
+  border-radius: 5px 0 0 5px;
+  width: 100%;
   }
-
-}
 .text-box-infos {
   margin-top: 16px;
   overflow: hidden;

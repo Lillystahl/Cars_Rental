@@ -44,11 +44,14 @@ export default class extends Controller {
         .setPopup(popup)
         .addTo(this.map)
     })
+    this.map.resize();
+
   }
 
   #fitMapToMarkers() {
     const bounds = new mapboxgl.LngLatBounds()
     this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
-    this.map.fitBounds(bounds, { padding: 100, maxZoom: 15, duration: 8000 })
+    this.map.fitBounds(bounds, { padding: 100, maxZoom: 15, duration: 2000 })
   }
+
 }
