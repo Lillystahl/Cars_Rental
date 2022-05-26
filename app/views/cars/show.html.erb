@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="row">
+  <div class="row" style="height: 700px;">
     <div id="carouselExampleControls" class="col-8 carousel slide" data-bs-ride="carousel" style="margin: 0; padding: 0;">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -23,18 +23,22 @@
     </div>
       <div class="col-4 map-box"></div>
     <div class="row">
-      <div class="text-box-infos col-8">
-        <p>Title: <%= @car.title %></p>
-        <p>Owner: <%= @car.user.first_name %></p>
-        <p>Location:</p>
-        <p>Description: <%= @car.description %></p>
-     </div>
-     <div class="booking-form col-4">
-        <%= simple_form_for [ @car, @booking ] do |f| %>
-          <%= f.input :start_date %>
-          <%= f.input :end_date %>
-          <%= f.submit "Submit booking" %>
-        <% end %>
+      <div class="col-md-6 col-xl-8 pr-4">
+        <div class="text-box-infos">
+          <p>Title: <%= @car.title %></p>
+          <p>Owner: <%= @car.user.first_name %></p>
+          <p>Location:</p>
+          <p>Description: <%= @car.description %></p>
+        </div>
+      </div>
+      <div class="col-md-6 col-xl-4">
+        <div class="booking-form">
+          <%= simple_form_for [ @car, @booking ] do |f| %>
+            <%= f.input :start_date %>
+            <%= f.input :end_date %>
+            <%= f.submit "Submit booking", class: "btn btn-primary w-100"%>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

@@ -10,7 +10,7 @@
         <%= link_to "cars/#{booking.car.id}" do%>
           <div class="card-product">
           <%=
-              car.photo.attached? ? cl_image_tag(booking.car.photo.key, crop: :fill, class:"card-img") : image_tag("https://mclaren.scene7.com/is/image/mclaren/Mclaren_Artura_Zenith%20Black_03:crop-16x9?wid=1980&hei=1114", class:"card-img")
+              booking.car.photo.attached? ? cl_image_tag(booking.car.photo.key, crop: :fill, class:"card-img") : image_tag("https://mclaren.scene7.com/is/image/mclaren/Mclaren_Artura_Zenith%20Black_03:crop-16x9?wid=1980&hei=1114", class:"card-img")
                 %>
             <div class="card-product-infos">
               <div class= "list_item">
