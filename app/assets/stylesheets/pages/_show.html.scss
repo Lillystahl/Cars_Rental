@@ -11,7 +11,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 6px;
+    border-radius: 5px 0 0 5px;
+
   }
 
 }
@@ -63,6 +64,14 @@
 
 .body {
   background-color: rgb(185, 105, 0);
+}
+
+.booking-form {
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-top: 5px;
+
 }
 
 // .text-box {
