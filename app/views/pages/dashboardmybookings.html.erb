@@ -1,8 +1,7 @@
 <div class="container">
-  <h1>Hey <%= current_user.first_name %></h1>
   <div class="row">
     <div class="col-4">
-      <%= render "dashboard_sidebar" %>
+      <%= render "sidebar_bookings" %>
     </div>
     <div class="col-8">
       <%@user.bookings.each do |booking| %>
