@@ -33,6 +33,25 @@
       <p>Owner: <%= @car.user.first_name %></p>
       <p>Address: <%= @car.address %></p>
       <p>Description: <%= @car.description %></p>
+      <div class="col-4 map-box"></div>
+    <div class="row">
+      <div class="col-md-6 col-xl-8 pr-4">
+        <div class="text-box-infos">
+          <p>Title: <%= @car.title %></p>
+          <p>Owner: <%= @car.user.first_name %></p>
+          <p>Location:</p>
+          <p>Description: <%= @car.description %></p>
+        </div>
+      </div>
+      <div class="col-md-6 col-xl-4">
+        <div class="booking-form">
+          <%= simple_form_for [ @car, @booking ] do |f| %>
+            <%= f.input :start_date %>
+            <%= f.input :end_date %>
+            <%= f.submit "Submit booking", class: "btn btn-primary w-100"%>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 

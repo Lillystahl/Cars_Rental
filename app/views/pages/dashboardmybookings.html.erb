@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Hey <%= current_user.first_name %></h1>
+  <div class="row">
+    <div class="col-4">
+      <%= render "dashboard_sidebar" %>
+    </div>
+    <div class="col-8">
+      <%@user.bookings.each do |booking| %>
+        <div class="px-3">
+        <%= link_to "cars/#{booking.car.id}" do%>
+          <div class="card-product">
+          <%=
+              booking.car.photo.attached? ? cl_image_tag(booking.car.photo.key, crop: :fill, class:"card-img") : image_tag("https://mclaren.scene7.com/is/image/mclaren/Mclaren_Artura_Zenith%20Black_03:crop-16x9?wid=1980&hei=1114", class:"card-img")
+                %>
+            <div class="card-product-infos">
+              <div class= "list_item">
+                <h3><%=booking.car.title%></h3>
+                <p><%=booking.start_date %></p>
+                <p><%=booking.end_date%></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -13,6 +13,7 @@ class CarsController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: { car: @car }),
         image_url: helpers.asset_url("https://i.pinimg.com/originals/96/7f/08/967f08d24af11b020931ebe21885f05d.jpg")
     }]
+    @booking = Booking.new
   end
 
   def new

@@ -19,11 +19,11 @@ Car.create!(title: "Jiahui's Car", address: "Elandsstraat, Amsterdam", descripti
 
 Car.create!(title: "Carolina's Car", address: "Leidseplein, Amsterdam", description: "It's fancy", price: 100, model_type: "Van", availability: true, user_id: carolina.id)
 
-Car.create!(title: "Freddy's Car", address: "Singel, Amsterdam", description: "It's fancy", price: 100, model_type: "Van", availability: true, user_id: carolina.id)
+Car.create!(title: "Carolina's Car",  description: "It's fancy", price: 100, model_type: "Van", availability: true, user_id: carolina.id)
 
-Car.create!(title: "Toby's Car", address: "Prinsengracht, Amsterdam", description: "It's fancy", price: 100, model_type: "Van", availability: true, user_id: carolina.id)
+Car.create!(title: "Carolina's Car",  description: "It's fancy", price: 100, model_type: "Van", availability: true, user_id: carolina.id)
 
-Car.create!(title: "Johanna's Car", address: "Keizersgracht, Amsterdam", description: "It's fancy", price: 100, model_type: "Van", availability: true, user_id: carolina.id)
+Car.create!(title: "Carolina's Car",  description: "It's fancy", price: 100, model_type: "Van", availability: true, user_id: carolina.id)
 
 puts "Cars created!"
 # file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg',"rb")
