@@ -19,11 +19,11 @@ Car.create!(title: "Jiahui's Car",  description: "It's super great", price: 50, 
 
 Car.create!(title: "Carolina's Car",  description: "It's fancy", price: 100, model_type: "Van", availability: true, user_id: carolina.id)
 
-Car.create!(title: "Freddy's Car",  description: "It's fancy", price: 100, model_type: "Van", availability: true, user_id: carolina.id)
+Car.create!(title: "Carolina's Car",  description: "It's fancy", price: 100, model_type: "Van", availability: true, user_id: carolina.id)
 
-Car.create!(title: "Toby's Car",  description: "It's fancy", price: 100, model_type: "Van", availability: true, user_id: carolina.id)
+Car.create!(title: "Carolina's Car",  description: "It's fancy", price: 100, model_type: "Van", availability: true, user_id: carolina.id)
 
-Car.create!(title: "Johanna's Car",  description: "It's fancy", price: 100, model_type: "Van", availability: true, user_id: carolina.id)
+Car.create!(title: "Carolina's Car",  description: "It's fancy", price: 100, model_type: "Van", availability: true, user_id: carolina.id)
 
 puts "Cars created!"
 # file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg',"rb")
