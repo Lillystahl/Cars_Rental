@@ -1,26 +1,38 @@
 <div class="container">
-  <div class="row" style="height: 700px;">
-    <div id="carouselExampleControls" class="col-8 carousel slide" data-bs-ride="carousel" style="margin: 0; padding: 0;">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://www.autoblog.nl/gallery/Ferrari/488_Pista//488-pista-10006.jpg" class="d-block w-100" alt="car">
-        </div>
-        <div class="carousel-item">
-          <img src="https://img.autovisie.nl/images/3VprBXVConFcg5hr6TL_p_beYa4=/1280x0/filters:quality(80):format(jpeg):background_color(fff)/https%3A%2F%2Fwww.autovisie.nl%2Fwp-content%2Fuploads%2FFerrari-488-Pista-Duik-in-de-Prijslijst-2.jpg" class="d-block w-100" alt="" >
-        </div>
-        <div class="carousel-item">
-          <img src="https://static.moniteurautomobile.be/imgcontrol/images_tmp/clients/moniteur/c680-d465/content/medias/images/cars/ferrari/f-488/ferrari--f-488--2018/ferrari--f-488--2018-m-3.jpg" class="d-block w-100" alt="">
-        </div>
+  <div class="row">
+    <%# <div id="carouselExampleControls" class="col-8 carousel slide" data-bs-ride="carousel" style="margin: 0; padding: 0;"> %>
+      <%# <div class="carousel-inner">
+        <div class="carousel-item active"> %>
+       <%= cl_image_tag(@car.photo.key, crop: :fill, class:"card-img d-block w-20", alt:"car")%>
+        <%# </div> %>
+        <%# <div class="carousel-item"> %>
+          <%# <img src="https://img.autovisie.nl/images/3VprBXVConFcg5hr6TL_p_beYa4=/1280x0/filters:quality(80):format(jpeg):background_color(fff)/https%3A%2F%2Fwww.autovisie.nl%2Fwp-content%2Fuploads%2FFerrari-488-Pista-Duik-in-de-Prijslijst-2.jpg" class="d-block w-100" alt="" > %>
+        <%# </div> %>
+        <%# <div class="carousel-item"> %>
+          <%# <img src="https://static.moniteurautomobile.be/imgcontrol/images_tmp/clients/moniteur/c680-d465/content/medias/images/cars/ferrari/f-488/ferrari--f-488--2018/ferrari--f-488--2018-m-3.jpg" class="d-block w-100" alt=""> %>
+        <%# </div> %>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <%# <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev"> %>
+        <%# <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
       <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
+    </div> %>
+    <div class="col-4 map-box">
+    <div style="width: 100%; height: 400px;"
+    data-controller="mapbox"
+    data-mapbox-markers-value="<%= @markers.to_json %>"
+    data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     </div>
+
+    <div class="text-box-infos">
+      <p>Title: <%= @car.title %></p>
+      <p>Owner: <%= @car.user.first_name %></p>
+      <p>Address: <%= @car.address %></p>
+      <p>Description: <%= @car.description %></p>
       <div class="col-4 map-box"></div>
     <div class="row">
       <div class="col-md-6 col-xl-8 pr-4">
