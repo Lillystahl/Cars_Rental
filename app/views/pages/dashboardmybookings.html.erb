@@ -6,8 +6,8 @@
     <div class="col-8">
       <%@user.bookings.each do |booking| %>
         <div class="px-3">
-        <%= link_to "cars/#{booking.car.id}" do%>
-          <div class="card-product">
+        <%= link_to car_path(booking.car) do%>
+          <div class="card-product" style="height:190px;">
           <%=
               booking.car.photo.attached? ? cl_image_tag(booking.car.photo.key, crop: :fill, class:"card-img") : image_tag("https://mclaren.scene7.com/is/image/mclaren/Mclaren_Artura_Zenith%20Black_03:crop-16x9?wid=1980&hei=1114", class:"card-img")
                 %>
@@ -18,6 +18,9 @@
                 <p><%=booking.end_date%></p>
               </div>
             </div>
+          </div>
+          <div style="text-align: right;">
+          <%= link_to "Delete", car_booking_path(booking.car, booking), method: :delete, data: {confirm: "Are you sure?"}, class:"btn mb-5", style:"color: white; background-color:#1D70A2; border: none;" %>
           </div>
         <% end %>
         </div>

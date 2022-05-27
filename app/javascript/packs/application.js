@@ -14,3 +14,5 @@ ActiveStorage.start()
 
 import "controllers"
 import "bootstrap"
+
+document.querySelector("#my-map").this.map.resize();

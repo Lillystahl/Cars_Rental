@@ -5,27 +5,31 @@
     </div>
     <div class="col-8">
       <%@cars_user.each do |car| %>
+      <div>
         <div class="px-3">
-        <%= link_to "cars/#{car.id}" do%>
-          <div class="card-product">
-          <%=
-              car.photo.attached? ? cl_image_tag(car.photo.key, crop: :fill, class:"card-img") : image_tag("https://mclaren.scene7.com/is/image/mclaren/Mclaren_Artura_Zenith%20Black_03:crop-16x9?wid=1980&hei=1114", class:"card-img")
-                %>
-            <div class="card-product-infos">
-              <div class= "list_item">
-                <%# <div> %>
+          <%= link_to car_path(car) do%>
+            <div class="card-product" style="height:190px;">
+            <%=
+                car.photo.attached? ? cl_image_tag(car.photo.key, crop: :fill, class:"card-img") : image_tag("https://mclaren.scene7.com/is/image/mclaren/Mclaren_Artura_Zenith%20Black_03:crop-16x9?wid=1980&hei=1114", class:"card-img")
+                  %>
+              <div class="card-product-infos">
+                <div class= "list_item">
                   <h3><%=car.title%></h3>
-                  <p><%=car.description %></p>
+
                   <p><%= car.model_type%></p>
                   <p><%= car.price %>$</p>
                   <p><%= car.user.first_name%> <%= car.user.last_name %></p>
-                <%# </div> %>
+                </div>
               </div>
-            </div>
-          </div>
-        <% end %>
         </div>
+          <div style="text-align: right;">
+            <%= link_to "Delete", car_path(car), method: :delete, data: {confirm: "Are you sure?"}, class:"btn btn-primary mb-5", style:"color: white; background-color:#1D70A2; border: none;" %>
+          </div>
+          <%#= link_to "Delete", car_path(car), method: :delete, data: {confirm: "Are you sure?"}, class:"btn btn-primary mb-5" %>
+          <% end %>
+      </div>
       <% end %>
+      </div>
     </div>
   </div>
 </div>
