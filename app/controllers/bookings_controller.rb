@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
     before_action :authenticate_user!
-
+  def create
     @car = Car.find(params[:car_id])
     @booking = Booking.new(booking_params)
     @booking.car = @car
@@ -10,6 +10,12 @@ class BookingsController < ApplicationController
     else
      render "cars/show"
     end
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to dashboard_bookings_path
   end
 
   private

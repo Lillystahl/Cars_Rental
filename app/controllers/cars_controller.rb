@@ -1,5 +1,5 @@
 class CarsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :destroy]
 
   def index
     @cars = Car.all
@@ -29,6 +29,12 @@ class CarsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @car = Car.find(params[:id])
+    @car.destroy
+    redirect_to dashboard_cars_path
   end
 
   private
