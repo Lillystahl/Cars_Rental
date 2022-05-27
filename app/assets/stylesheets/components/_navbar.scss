@@ -4,6 +4,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  margin-top: 0px;
 
 
   .navbar-collapse {
@@ -17,4 +18,13 @@
 
 .nav-link {
   display: inline;
+  color:  white;
+}
+
+.nav-link :hover {
+  color: black;
+}
+
+a {
+  color: white;
 }

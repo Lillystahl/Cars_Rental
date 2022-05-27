@@ -66,20 +66,15 @@
 
 .map-box {
   background-color: rgb(239, 236, 230);
+  border: 2px solid #173753;
+  border-radius: 5px;
 }
 
 .body {
   background-color: rgb(185, 105, 0);
 }
 
-.booking-form {
-  border: 1px solid grey;
-  border-radius: 5px;
-  margin-top: 16px;
-  height: 100%;
-  padding: 16px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
+
 
 // .text-box {
 //   background-color: aqua;
