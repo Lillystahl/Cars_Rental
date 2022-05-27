@@ -13,28 +13,20 @@ carolina = User.create!(email: "carolina@gmail.com", password:"123456", first_na
 jiahui = User.create!(email: "jiahui@gmail.com", password:"123456", first_name: "Jiahui", last_name: "Li", date_of_birth: Date.new(2000,12,9))
 eric = User.create!(email: "eric@gmail.com", password:"123456", first_name: "Eric", last_name: "Stahl", date_of_birth: Date.new(1999,4,10))
 
-Car.create!(title: "Eric's Car", address: "Dam, Amsterdam", description: "It's great", price: 10, model_type: "SUV", availability: true, user_id: eric.id)
+Car.create!(title: "Eric's Car", address: "Dam, Amsterdam", description: "This is one of the first all-electric compact SUVs to hit the market, offering loads of standard features and a genuinely spacious cabin.", price: 10, model_type: "SUV", availability: true, user_id: eric.id)
 
-Car.create!(title: "Jiahui's Car", address: "Elandsstraat, Amsterdam", description: "It's super great", price: 50, model_type: "Cabrio", availability: true, user_id: jiahui.id)
+Car.create!(title: "Jiahui's Car", address: "Elandsstraat, Amsterdam", description: "Sit behind the wheel and the stylish lines of the dashboard will immediately win you over.", price: 50, model_type: "Cabrio", availability: true, user_id: jiahui.id)
 
-Car.create!(title: "Carolina's Car", address: "Leidseplein, Amsterdam", description: "It's fancy", price: 100, model_type: "Van", availability: true, user_id: carolina.id)
+Car.create!(title: "Carolina's Car", address: "Leidseplein, Amsterdam", description: "This van features loads of intelligent functionality including remote monitoring, telematics, even geo fencing, alerting you if the van strays out of a predefined area.", price: 100, model_type: "Van", availability: true, user_id: carolina.id)
 
-Car.create!(title: "Carolina's Car",  description: "It's fancy", price: 100, model_type: "Van", availability: true, user_id: carolina.id)
+Car.create!(title: "Carolina's Car",  description: "The driver's seat is fully leather-lined, which is what you get at the Tekna trim level - lots of leather and a seat that is 8-ways adjustable with electric controls. ", price: 100, model_type: "Van", availability: true, user_id: carolina.id)
 
-Car.create!(title: "Carolina's Car",  description: "It's fancy", price: 100, model_type: "Van", availability: true, user_id: carolina.id)
+Car.create!(title: "Carolina's Car",  description: "When you're driving this van, you can see absolutely everything with maximum driver visibility.", price: 100, model_type: "Van", availability: true, user_id: carolina.id)
 
-Car.create!(title: "Carolina's Car",  description: "It's fancy", price: 100, model_type: "Van", availability: true, user_id: carolina.id)
+Car.create!(title: "Carolina's Car",  description: "As a compact van it serves its role very well, the 2148cc engine giving the driver 88bhp and an impressive 220Nm of torque at low revs to move the capacity payload of just under a 1000Kg around.", price: 100, model_type: "Van", availability: true, user_id: carolina.id)
 
 puts "Cars created!"
-# file = URI.open('https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg',"rb")
-# Car.all.each do |car|
-#   car.photo.attach(io: File.open("./app/assets/images/cars/car1.jpg"), filename: 'car1.png', content_type: 'image/jpg')
-#   car.photo.attach(io: File.open("./app/assets/images/cars/car2.jpg"), filename: 'car2.jpg', content_type: 'image/jpg')
-#   car.photo.attach(io: File.open("./app/assets/images/cars/car3.jpg"), filename: 'car3.jpg', content_type: 'image/jpg')
-#   car.photo.attach(io: File.open("./app/assets/images/cars/car4.jpg"), filename: 'car4.jpg', content_type: 'image/jpg')
-#   car.photo.attach(io: File.open("./app/assets/images/cars/car5.jpg"), filename: 'car5.jpg', content_type: 'image/jpg')
-#   car.photo.attach(io: File.open("./app/assets/images/cars/car6.jpg"), filename: 'car6.jpg', content_type: 'image/jpg')
-# end
+
 Car.all.each_with_index do |car, i|
   car.photo.attach(io: File.open("./app/assets/images/cars/car#{i + 1}.jpg"), filename: "car#{i + 1}.jpg", content_type: 'image/jpg')
 end
