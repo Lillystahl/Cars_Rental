@@ -24,7 +24,7 @@ li {
 
 body {
   background: #173753;
-  color: #575F7D;
+  color:  white;
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
 }
@@ -41,9 +41,13 @@ h2, h3 {
 
 p {
   font-family: 'Montserrat', sans-serif;
+  color:  #173753;
 }
 
 a{
-  color:#575F7D;
   text-decoration:none;
+}
+
+a :hover {
+  color: black;
 }
