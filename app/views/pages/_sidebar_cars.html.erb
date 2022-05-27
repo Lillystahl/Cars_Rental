@@ -1,5 +1,5 @@
 <div class="sidebar">
-  <h1>Hey <%= current_user.first_name %></h1>
-  <span> <strong><%= link_to "My cars", dashboard_cars_path %></strong> </span>
-  <span><%= link_to "My bookings", dashboard_bookings_path %></span>
+  <h1 class="text-white">Hey <%= current_user.first_name %></h1>
+  <span> <strong><%= link_to "My cars", dashboard_cars_path, class:"text-white" %></strong> </span>
+  <span><%= link_to "My bookings", dashboard_bookings_path, class:"text-white" %></span>
 </div>

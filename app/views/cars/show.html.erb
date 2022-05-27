@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mb-5" >
   <div class="row">
     <%# <div id="carouselExampleControls" class="col-8 carousel slide" data-bs-ride="carousel" style="margin: 0; padding: 0;"> %>
       <%# <div class="carousel-inner">
@@ -42,12 +42,12 @@
          <div class="price"><p><strong>Price:</strong> <%= @car.price %></p></div>
         </div>
       </div>
-      <div class="col-md-6 col-xl-4">
+      <div class="col-md-6 col-xl-4 mt-3">
         <div class="booking-form">
           <%= simple_form_for [ @car, @booking ] do |f| %>
             <%= f.input :start_date %>
             <%= f.input :end_date %>
-            <%= f.submit "Submit booking", class: "btn btn-primary w-100"%>
+            <%= f.submit "Submit booking", class: "btn btn-primary w-100 text-white"%>
           <% end %>
         </div>
       </div>
@@ -55,8 +55,3 @@
   </div>
   <div>
 </div>
-
-<%#
-"https://www.autoblog.nl/gallery/Ferrari/488_Pista//488-pista-10006.jpg"
-"https://img.autovisie.nl/images/3VprBXVConFcg5hr6TL_p_beYa4=/1280x0/filters:quality(80):format(jpeg):background_color(fff)/https%3A%2F%2Fwww.autovisie.nl%2Fwp-content%2Fuploads%2FFerrari-488-Pista-Duik-in-de-Prijslijst-2.jpg"
-"https://static.moniteurautomobile.be/imgcontrol/images_tmp/clients/moniteur/c680-d465/content/medias/images/cars/ferrari/f-488/ferrari--f-488--2018/ferrari--f-488--2018-m-3.jpg" %>
